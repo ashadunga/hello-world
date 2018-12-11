@@ -1,0 +1,17 @@
+Stair case problem -- Right Alignment
+
+static void staircase(int n) {
+        int i=0; int j=0; int k=0;
+        for(i=0;i<n;i++){
+            // Print spaces
+            for(j=0;j<n-1-i;j++){
+                System.out.printf("%1s","");
+            }
+            // Print # symbol
+            for(k=0;k<(n-j);k++){
+                System.out.printf("%s","#");
+            }
+            System.out.println();
+        }
+
+    }

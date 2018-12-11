@@ -1,0 +1,44 @@
+static void miniMaxSum(int[] arr) {
+        int min=0; int minPos=0;
+        int max=0; int maxPos=0;
+        long minSum=0;
+        long maxSum=0;
+        min=arr[0];
+        max=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]<min){
+                min=arr[i];
+                minPos=i;
+            }
+            if(arr[i]>max){
+                max=arr[i];
+                maxPos=i;
+            }
+        }
+        if(min==max){
+                if(minPos==maxPos){
+                    for(int k=0;k<arr.length;k++){
+                        if(k!=minPos){
+                            minSum+=arr[k];
+                            maxSum=minSum;
+                        }
+                    }
+                }
+                
+            }else{
+                 for(int j=0;j<arr.length;j++){
+            if(arr[j]!=min){
+                maxSum+=arr[j];
+            }
+            if(arr[j]!=max){
+                minSum+=arr[j];
+            }
+            
+        }
+        }
+       
+        System.out.print(minSum);
+        System.out.printf("%1s","");
+        System.out.print(maxSum);
+
+    }
